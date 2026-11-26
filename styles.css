@@ -1,0 +1,271 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #070B1A;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(7, 11, 26, 0.85);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #38B6FF;
+}
+
+nav a {
+    color: #B8C7DF;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #00E5FF;
+    text-shadow: 0 0 12px #00E5FF;
+}
+
+
+
+.home {
+    min-height: 100vh;
+    padding: 120px 10% 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    background:
+        radial-gradient(ellipse at 80% 40%, #123c7060, transparent 45%),
+        radial-gradient(ellipse at 20% 80%, #39217a50, transparent 45%),
+        #070B1A;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.welcome {
+    color: #00E5FF;
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.home-content h1 {
+    font-size: 50px;
+    line-height: 1.3;
+}
+
+.home-content h1 span {
+    background: linear-gradient(90deg, #38B6FF, #A78BFA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.home-content h2 {
+    color: #38B6FF;
+    margin: 10px 0 20px;
+    font-size: 25px;
+}
+
+.home-content p {
+    color: #B8C7DF;
+    line-height: 1.8;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: #38B6FF;
+    color: #070B1A;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px #38B6FF;
+    transform: translateY(-3px);
+}
+
+.btn.outline {
+    background: transparent;
+    color: #38B6FF;
+    border: 1px solid #38B6FF;
+}
+
+
+.home-image img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #38B6FF;
+    box-shadow: 0 0 25px #38B6FF,
+                0 0 60px #123c70;
+}
+
+
+
+section:not(.home) {
+    padding: 100px 10%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.heading span {
+    color: #38B6FF;
+}
+
+
+
+.about {
+    background: #0D142A;
+}
+
+.about-content {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    border: 1px solid #24466C;
+    border-radius: 20px;
+    background: #101A35;
+    text-align: center;
+    line-height: 2;
+    color: #B8C7DF;
+}
+
+
+
+.skill-container,
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.skill-box,
+.project-box {
+    padding: 30px;
+    background: #101A35;
+    border: 1px solid #24466C;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.skill-box:hover,
+.project-box:hover {
+    transform: translateY(-8px);
+    border-color: #00E5FF;
+    box-shadow: 0 0 18px #00E5FF30;
+}
+
+.skill-box h3,
+.project-box h3 {
+    color: #38B6FF;
+    margin-bottom: 12px;
+}
+
+.skill-box p,
+.project-box p {
+    color: #B8C7DF;
+    line-height: 1.7;
+}
+
+
+
+.contact {
+    background: #0D142A;
+    text-align: center;
+}
+
+.contact p {
+    color: #B8C7DF;
+    margin-bottom: 25px;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #070B1A;
+    color: #8495B2;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 11px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 170px;
+    }
+
+    .home-content h1 {
+        font-size: 35px;
+    }
+
+    .home-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .skill-container,
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
